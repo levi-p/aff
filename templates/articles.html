@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div style="height:100%;width:50%;border:2px solid orange;margin:2px;margin-bottom:5px;margin-left:10px;overflow:hidden;text-align:left;">
+<h2 style="text-align:left;font-weight: bold">{{arti.Title}}</h2>
+<p style="text-align:left"> {{arti.Article}}</p>
+
+<!--form-->
+<form method=POST action='.'>
+{{'form'}}
+</form>
+
+<!-- display comments -->
+<h2 style="text-align:left">{{arti.Comments}}</h2>
+<p style="text-align:left">{{arti.Comments.comment}}</p>
+</div>
+
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<!Doctype html>
+
+<html>
+<body>
+{% block content %}
+<div class="done">
+{% for i in P_details %}
+
+<div class='twoood' style="overflow:hidden;">
+   <p>{% if i.Pics %}
+   <img src="{{i.Pics.url}}" style="height:90px;float:left;width:70px;border:1px solid #1E90FF;margin:2px;" alt='ff'></br>
+   {% else %}
+   <img src="{% static 'd.png' %}".crop.680x680 alt='dpdp' style="height:90px;float:left;width:70px;border:1px solid #1E90FF;margin:2px;"></br>
+   
+   {% endif %}
+   
+   
+
+   <a href='' style="color:#1E90FF">{{i.Name}}</br></a>
+   {{i.Location}}</br>
+   {{i.Category}}</p>
+</div>
+
+   
+{% endfor %}
+</div>
+{% endblock %}
+
+
+
+</body>
+</html>
+
