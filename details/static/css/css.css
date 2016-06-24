@@ -1,0 +1,121 @@
+{% load static %}
+
+
+a:hover{
+    background-color: orange;
+    text-decoration: none;
+}
+a.active{
+    background-color: green;
+    text-decoration: none;
+}
+
+.one {
+    height: 5%;
+    background-color: red;
+    background: linear-gradient(to right,#191970,#191970 );
+    margin-bottom: 2px;
+    box-shadow: 0 5px 5px;
+    border-radius: 5px;
+    
+    width:100%;
+}
+
+h3 {
+    color: orange;
+    font-weight: bold;
+    text-shadow: 0px 0px 5px orange;
+}
+.two {
+    height: 30%;
+    background-color: blue;
+    background: linear-gradient(to right,#191970,#191970 );
+    box-shadow: 0 5px 5px;
+    border-radius: 5px;
+    color: ;
+    
+}
+
+li {
+    display: inline;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+.twoimg {
+    height: 90%;
+    margin: 5px;
+    border-radius: 50%;
+    opacity:0.85;
+}
+/* of affix image */
+
+#two {
+    width: 20%;
+    height: 80%;
+    float: right;
+    border: 0px solid ;
+    padding: 10px;
+    margin-right:5px;
+    text-align: ;
+    color: white;
+}
+
+/* of 2nd image */
+.twoo {
+    width: 20%;
+    height: 20%;
+    float: left;
+    border: 3px solid orange;
+    padding: 10px;
+    margin-top:20px;
+    margin-left:10%;
+    box-shadow:0 5px 5px;
+    border-radius: 5px;
+}
+ /* of third image */
+
+.twooo {
+    width: 20%;
+    height: 20%;
+    float: left;
+    border: 3px solid orange;
+    padding: 10px;
+    margin-top:20px;
+    margin-left:10px;
+    box-shadow:0 5px 5px;
+    border-radius: 5px;
+   }
+/* of details */
+
+.done {
+    float: right;
+    width: 50%;
+    height: 100%;
+    overflow: auto;
+    border: ;
+}
+
+.twoood {
+    width: 80%;
+    height: 20%;
+    
+    border: 3px solid orange;
+    padding: 10px;
+    margin-top:20px;
+    margin-left:10px;
+    box-shadow:0 5px 5px;
+    border-radius: 5px;
+   }
+
+
+#twoooimg{
+    height: 98%;
+    width:98%;
+    margin: 5px;
+    border-radius: ;
+    opacity:1;
+    padding: ;
+
+}
+
