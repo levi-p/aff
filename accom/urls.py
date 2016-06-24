@@ -25,7 +25,7 @@ from . import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.home),
-    url(r'^d/',include('details.urls')),
+    url(r'^d/',include('details.urls'), name='details'),
     url(r'^c/',include('articles.urls')),
 ] + static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
 

@@ -1,149 +1,57 @@
 <!Doctypt html>
 <html>
 <head>
-<style>
 {% load static %}
-
-
-a:hover{
-    background-color: orange;
-    text-decoration: none;
-}
-a.active{
-    background-color: green;
-    text-decoration: none;
-}
-
-.one {
-    height: 5%;
-    background-color: red;
-    background: linear-gradient(to right,#191970,#191970 );
-    margin-bottom: 2px;
-    box-shadow: 0 5px 5px;
-    border-radius: 5px;
-    
-    width:100%;
-}
-
-h3 {
-    color: orange;
-    font-weight: bold;
-    text-shadow: 0px 0px 5px orange;
-}
-.two {
-    height: 30%;
-    background-color: blue;
-    background: linear-gradient(to right,#191970,#191970 );
-    box-shadow: 0 5px 5px;
-    border-radius: 5px;
-    color: ;
-    
-}
-
-li {
-    display: inline;
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-}
-.twoimg {
-    height: 90%;
-    margin: 5px;
-    border-radius: 50%;
-    opacity:0.85;
-}
-/* of affix image */
-
-#two {
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="{% static 'css/css.css' %}" type="text/css" rel="stylesheet">
+<style>
+.sidenav {
     width: 20%;
-    height: 80%;
-    float: right;
-    border: 0px solid ;
-    padding: 10px;
-    margin-right:5px;
-    text-align: ;
-    color: white;
-}
-
-/* of 2nd image */
-.twoo {
-    width: 20%;
-    height: 20%;
+    height: 50%;
+    border:/* 2px solid red;*/;
     float: left;
-    border: 3px solid orange;
-    padding: 10px;
-    margin-top:20px;
-    margin-left:28%;
-    box-shadow:0 5px 5px;
-    border-radius: 5px;
+    position: relative;
+    bottom: -5%;
+    clear: both; }
 }
- /* of third image */
-
-.twooo {
-    width: 20%;
-    height: 20%;
-    float: left;
-    border: 3px solid orange;
-    padding: 10px;
-    margin-top:20px;
-    margin-left:10px;
-    box-shadow:0 5px 5px;
-    border-radius: 5px;
-   }
-/* of details */
-
-.done {
-    float: right;
-    width: 50%;
-    height: 100%;
-    overflow: auto;
-    border: ;
+#but{
+   background-color: orange;
 }
-
-.twoood {
-    width: 80%;
-    height: 20%;
-    
-    border: 3px solid orange;
-    padding: 10px;
-    margin-top:20px;
-    margin-left:10px;
-    box-shadow:0 5px 5px;
-    border-radius: 5px;
-   }
-
-
-#twoooimg{
-    height: 98%;
-    width:98%;
-    margin: 5px;
-    border-radius: ;
-    opacity:1;
-    padding: ;
-
-}
+</style>
 </head>
 <body>
 
-</style>
+
 <div class="one">
 <ul>
-    <a href='#' ><li>one</li></a>
-    <a href='#'><li>two</li></a>
-    <a href='#'><li>three</li></a>
+    <a href='/' ><li>Home</li></a>
+    <a href="{% url 'details' %}"><li>All Places</li></a>
+    <a href='#'><li>About us</li></a>
+</ul>
 
 </div>
+
 {% block content %}
 <div class="two">
-<div style="height: 90%;border: 0px solid ;width: 20%;float:left;"><img src="{% static 'Affix.png' %}" class="twoimg"></img></div>
-<div id='two'>
+<div style="height: 80%;border: 0px solid ;width: 40%;float:left;color: white;"><img src="{% static 'Affix.png' %}" class="twoimg"></img>
+<di><p>Showing you places you never thought existed.</p></div>
+
+<div id='two' style="background-color: ;">
 <h3>Welcome!</h3>
-<p>i think this is great great great,excuse me but did i say great,yes i meant great</p></div>
+<p>we provide  you with latest information on accomodation in places you are visiting in malawi</p></div>
+
+</div>
+<div class="sidenav" >
+<form>
+<input type="search" value="search"></br>
+<input type="button" value="search" style="background-color: orange;border-radius: 5px;" id="but">
 </div>
 
 <div class='twoo'><img src="{% static 'one.jpg' %}" id="twoooimg" ></img></div>
 <div class='twooo'><img src="{% static 'two.jpg' %}" id="twoooimg"></img></div>
 
 <div class="one" style="position:relative;bottom:-60%;color:white;font-weight:bold;width:100%;">
-<div style="position:absolute;text-align:center;width:100%;">&copy; affixmw 2016</div></div>
+<div style="position:absolute;text-align:center;width:100%;">&copy; affixmw 2016</div>
+
+</div>
 {% endblock %}
