@@ -1,4 +1,8 @@
 from django.shortcuts import render
+from details.models import Home_page_pic
 
 def home(request):
-    return render(request,'base.html')
+    H_p=Home_page_pic.objects.get(_active='eya')
+    
+    
+    return render(request,'base.html',locals())
