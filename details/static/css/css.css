@@ -1,5 +1,17 @@
 {% load static %}
 
+html, body, #container { height: 100%; }
+body > #container { height: auto; min-height: 100%; }
+
+#footer {
+ clear: both;
+ position: relative;
+ z-index: -10;
+ height: 3em;
+ margin-top: -3em;
+}
+
+#content { padding-bottom: 3em; }
 
 a:hover{
     background-color: orange;
@@ -12,11 +24,12 @@ a.active{
 
 .one {
     height: 5%;
-    background-color: red;
-    background: linear-gradient(to right,#191970,#191970 );
+    background-color: #191930;
+    background: linear-gradient(to right,#191940,#191930 );
     margin-bottom: 2px;
     box-shadow: 0 5px 5px;
     border-radius: 5px;
+   
     
     width:100%;
 }
@@ -28,8 +41,8 @@ h3 {
 }
 .two {
     height: 30%;
-    background-color: blue;
-    background: linear-gradient(to right,#191970,#191970 );
+    background-color: #191930;
+    background: linear-gradient(to right,#191940,#191930 );
     box-shadow: 0 5px 5px;
     border-radius: 5px;
     color: ;
@@ -63,14 +76,14 @@ li {
 
 /* of 2nd image */
 .twoo {
-    width: 20%;
-    height: 20%;
-    float: left;
-    border: 3px solid orange;
+    width: 25%;
+    height: 30%;
+    margin: auto;
+    border: 1px solid orange;
     padding: 10px;
     margin-top:20px;
-    margin-left:10%;
-    box-shadow:0 5px 5px;
+    
+    box-shadow:0 0px 0px;
     border-radius: 5px;
 }
  /* of third image */
@@ -83,7 +96,7 @@ li {
     padding: 10px;
     margin-top:20px;
     margin-left:10px;
-    box-shadow:0 5px 5px;
+    box-shadow:0 0px 0px;
     border-radius: 5px;
    }
 /* of details */
@@ -92,7 +105,7 @@ li {
     float: right;
     width: 50%;
     height: 100%;
-    overflow: auto;
+    kkoverflow: auto;
     border: ;
 }
 
@@ -100,7 +113,7 @@ li {
     width: 80%;
     height: 20%;
     
-    border: 3px solid orange;
+    border: 2px solid orange;
     padding: 10px;
     margin-top:20px;
     margin-left:10px;

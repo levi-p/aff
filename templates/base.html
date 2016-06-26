@@ -17,12 +17,21 @@
 #but{
    background-color: orange;
 }
+a {
+color:#1E90FF;
+}
+
+a:hover {
+    color:orange;
+}
 </style>
 </head>
 <body>
+<div id="container" stylde="border: ">
+    <div id="content">
 
 
-<div class="one">
+<div class="one" style="width:70%;height:170px;float:left">
 <ul>
     <a href='/' ><li>Home</li></a>
     <a href="{% url 'details' %}"><li>All Places</li></a>
@@ -30,9 +39,16 @@
 </ul>
 
 </div>
+<div class="one" style="width:25%;height:190px;float:right;clear:none;border:2px solid white;border-bottom:2px solid white;background: linear-gradient(to right,white,white );box-shadow: 0 0px 0px;padding:5px;text-align:center">
+    <div id='ntyet' style="">
+<div style="height:35%;witdth;100%;border:0.5px solid #1E90FF;text-align:center;background-color:#1E90FF"><h2 style="color:orange">Welcome!</h2></div>
+<p>We provide  you with uptodate information on accomodation in places you are visiting in Malawi</p></div>
+
+</div>
+</div>
 
 {% block content %}
-<div class="two">
+<!--<div class="two">
 <div style="height: 80%;border: 0px solid ;width: 40%;float:left;color: white;"><img src="{% static 'Affix.png' %}" class="twoimg"></img>
 <di><p>Showing you places you never thought existed.</p></div>
 
@@ -40,18 +56,31 @@
 <h3>Welcome!</h3>
 <p>we provide  you with latest information on accomodation in places you are visiting in malawi</p></div>
 
-</div>
-<div class="sidenav" >
+</div>-->
+<div style="border-top:2px solid #1E90FF;width:100%;height:auto;clear:both;border-bottom:2px solid white;">
+<div class="sidenav" style="border:" >
 <form>
 <input type="search" value="search"></br>
 <input type="button" value="search" style="background-color: orange;border-radius: 5px;" id="but">
+
+<div style="text-size:2px;"> <a href="#" style="text-decoration:none;"><p> Start Here</p></a>
+</div>
+
 </div>
 
 <div class='twoo'><img src="{% static 'one.jpg' %}" id="twoooimg" ></img></div>
-<div class='twooo'><img src="{% static 'two.jpg' %}" id="twoooimg"></img></div>
+<!--<div class='twooo'><img src="{% static 'two.jpg' %}" id="twoooimg"></img></div>-->
 
-<div class="one" style="position:relative;bottom:-60%;color:white;font-weight:bold;width:100%;">
-<div style="position:absolute;text-align:center;width:100%;">&copy; affixmw 2016</div>
+
+ 
+</div>
+
+{% endblock %}
+<div class="one" style="position:fixed;bottom:0%;color:white;font-weight:bold;width:100%;">
+<div style="position:relative;text-align:center;width:100%;">&copy; affixmw 2016</div>
+
+
 
 </div>
-{% endblock %}
+</div>
+<!--<div  id="footer" >My Sticky Footer</div>-->
