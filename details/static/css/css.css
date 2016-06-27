@@ -1,8 +1,12 @@
 {% load static %}
 
+
 html, body, #container { height: 100%; }
 body > #container { height: auto; min-height: 100%; }
 
+ * {
+    box-sizing: border-box;
+}
 #footer {
  clear: both;
  position: relative;
