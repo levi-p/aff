@@ -1,6 +1,7 @@
 from __future__ import unicode_literals
 
 from django.db import models
+from django.core.urlresolvers import reverse
 
 # Create your models here.
 
@@ -16,7 +17,12 @@ class Article_details(models.Model):
     Title = models.CharField(max_length=30)
     Article = models.TextField()
     Pic = models.ImageField(blank=True)
-    Comments = models.ForeignKey(Comments,default='one')
+
+    def __str__(self):
+        return self.Title
+    
+    def get_absolute_url(self):
+        return reverse('art:article',kwargs={'article_id':self.id,})
     
 
 

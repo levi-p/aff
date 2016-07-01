@@ -2,5 +2,6 @@ from django.conf.urls import url
 from . import views
 
 urlpatterns = [
-    url(r'^article/',views.Article_view),
+    url(r'^articles/',views.art_list, name='list'),
+    url(r'^article/(?P<article_id>[0-9]+)',views.Article_view, name='article'),
 ]

@@ -6,3 +6,6 @@ def home(request):
     
     
     return render(request,'base.html',locals())
+
+def About(request):
+    return render(request,'about.html',locals())

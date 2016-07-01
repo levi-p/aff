@@ -1,18 +1,30 @@
 {% extends 'base.html' %}
+{% load comments %}
 
 {% block content %}
-<div style="border-radius: 5px;height:100%;width:50%;border:2px solid orange;margin:auto;margin-top: 10px;padding: 10px;margin-left:;overflow:hidden;text-align:left;">
-<h2 style="text-align:left;font-weight: bold">{{arti.Title}}</h2>
-<p style="text-align:left"> {{arti.Article}}</p>
+<div style="border-radius: 5px;height:auto;width:50%;border:2px solid orange;margin:auto;margin-top: 10px;padding: 10px;margin-left:;overflow:hidden;text-align:left;">
+<h2 style="text-align:left;font-weight: bold">{{artic.Title}}</h2>
+<p style="text-align:left"> {{artic.Article}}</p>
 
-<!--form-->
-<form method=POST action='.'>
-{{'form'}}
-</form>
 
+
+{% get_comment_form for artic as form %}
+<table>
+  <form action="{% comment_form_target %}" method="post">
+    {% csrf_token %}
+    
+    {{ form }}
+    <tr>
+      <td colspan="2">
+        <input type="submit" name="submit" value="Post">
+        <input type="submit" name="preview" value="Preview">
+      </td>
+    </tr>
+  </form>
+</table>
 <!-- display comments -->
-<h2 style="text-align:left">{{arti.Comments}}</h2>
-<p style="text-align:left">{{arti.Comments.comment}}</p>
-</div>
+
+{% render_comment_list for artic %}
+
 
 {% endblock %}

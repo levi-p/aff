@@ -23,10 +23,13 @@ from . import views
 
 
 urlpatterns = [
+    
+    url(r'^about/', views.About, name='about'),
+    url(r'^comments/', include('django_comments.urls')),
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.home),
     url(r'^d/',include('details.urls'), name='details'),
-    url(r'^c/',include('articles.urls')),
+    url(r'^c/',include('articles.urls',namespace='art')),
 ] + static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
 
 if settings.DEBUG:
