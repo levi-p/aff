@@ -2,6 +2,7 @@ from __future__ import unicode_literals
 
 from django.db import models
 from django.core.urlresolvers import reverse
+from zinnia.markups import html_format
 
 # Create your models here.
 
@@ -15,8 +16,15 @@ class Comments(models.Model):
 
 class Article_details(models.Model):
     Title = models.CharField(max_length=30)
-    Article = models.TextField()
+    Article = models.TextField(blank=True)
     Pic = models.ImageField(blank=True)
+
+    @property
+    def html_content(self):
+        """
+        Returns the "content" field formatted in HTML.
+        """
+        return html_format(self.Article)
 
     def __str__(self):
         return self.Title

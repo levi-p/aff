@@ -37,7 +37,7 @@ a:hover {
 <div class="one" style="width:70%;height:170px;float:left;padding:0px;">
 <ul>
     <a href='/' ><li>Home</li></a>
-    <a href="{% url 'details' %}"><li>Places</li></a>
+    <a href="{% url 'Det:details' %}"><li>Places</li></a>
     <a href="{% url 'art:list' %}"><li>Articles</li></a>
     <a href="{% url 'about' %}"><li>About us</li></a>
     
@@ -47,7 +47,7 @@ a:hover {
 </div>
 </div>
 <div class="one" style="width:25%;height:190px;float:right;clear:none;border:;border-bottom:2px solid white;background: linear-gradient(to right,white,white );box-shadow: 0 0px 0px;padding:5px;text-align:center">
-    <div id='ntyet' style="padding:0px;position:relative;top:-7px">
+    <div id='ntyet' style="padding:0px;position:relative;top:-4px">
 <div style="height:40%;witdth;100%;border:0.5px solid #191940;text-align:center;background-color:#191940;border-radius:5px;padding:0px"><h2 style="color:orange">Welcome!</div>
 <p style="color:#867abe;text-size:8px;">We provide  you with uptodate information on accomodation in places you are visiting in Malawi. We hope to give you an amazing experience. </p></div>
 
@@ -67,11 +67,14 @@ a:hover {
 </div>-->
 
 <div class="sidenav" style="border:" >
-<form>
-<input type="search" value="search"></br>
-<input type="button" value="search" style="background-color: orange;border-radius: 5px;" id="but">
+<form action="{% url 'home' %}" method="GET">
+{% csrf_token %}
+{{form.as_table}}
+{{results}}
+</br>
+<input type="submit" value="search" style="background-color: orange;border-radius: 5px;" id="but"></form>
 
-<div style="text-size:2px;"> <a href="{% url 'details' %}" style="text-decoration:none;"><p> Start Here</p></a>
+<div style="text-size:2px;"> <a href="{% url 'Det:details' %}" style="text-decoration:none;"><p> Start Here</p></a>
 </div>
 
 </div>
@@ -85,7 +88,7 @@ a:hover {
 
 
 
-</div>v
+</div> 	
 <!-- of SP-->
 <div class="twdo" style="width:25%;float:right;position:relative;bottom:28%;background-color: white;height: 50%;clear:;"></div>
 {% endblock %}

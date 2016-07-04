@@ -35,9 +35,10 @@ ul a{
    
    
 
-   <a href='' style="color:#1E90FF">{{i.Name}}</br></a>
+   <a href='{{i.get_absolute_url}}' style="color:#1E90FF">{{i.Name}}</br></a>
    {{i.Location}}</br>
    {{i.Category}}</p>
+   <a href='{{i.get_absolute_url}}' style="background-color:green;color:white;text-decoration:none">Click to View Place Details</a>
 </div>
 
    

@@ -2,12 +2,22 @@
 {% load comments %}
 
 {% block content %}
-<div style="border-radius: 5px;height:auto;width:50%;border:2px solid orange;margin:auto;margin-top: 10px;padding: 10px;margin-left:;overflow:hidden;text-align:left;">
-<h2 style="text-align:left;font-weight: bold">{{artic.Title}}</h2>
-<p style="text-align:left"> {{artic.Article}}</p>
+{% if artic.Pic %}
+<div class='twoo'><img src="{{artic.Pic.url}}" style="margin:auto;height:20%;witdth:20%" alt="image"></img></div>
+{% endif %}
 
+<div style="border-radius: 5px;height:auto;width:50%;border:;margin:auto;margin-top: 10px;padding: 10px;margin-left:;overflow:hidden;text-align:left;">
 
+<h2 style="text-align:center;font-weight: bold">{{artic.Title}}</h2>
+<p style="text-align:center"> {{artic.Article}}</p></br>
 
+<h3>Post a comment</h3>
+{% render_comment_form for artic %}
+
+{% render_comment_list for artic %}
+</div>
+
+{% comment %}
 {% get_comment_form for artic as form %}
 <table>
   <form action="{% comment_form_target %}" method="post">
@@ -22,9 +32,12 @@
     </tr>
   </form>
 </table>
-<!-- display comments -->
 
-{% render_comment_list for artic %}
+<!-- display comments -->
+{% endcomment %}
+
+
+
 
 
 {% endblock %}
