@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<div style="text-align:center">
+<div >
+<img src="{{P2_details.Pics.url}}" alt="image" style="width:40%;height:50%;margin:auto"></img></div>
+{{P2_details.Name}}
+{{P2_details.Location}}
+{{P2_details.category.Name}}
+{{P2_details.Discription}}
+</div>
+{% endblock %}
