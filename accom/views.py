@@ -8,11 +8,18 @@ def home(request):
     
     if request.method=='GET':
         form=search_form(request.POST)
-        qr=request.GET.get('search','h')
-        try:
-            g=Q(Location__icontains=qr)
-            results = Place_details.objects.filter(g)
-        except: results='me evi'
+        qr=request.GET.get('q','')
+        if qr!='':
+            
+            try:
+                g=(Q(Location__icontains=qr)|
+                   Q(Name__icontains=qr)|
+                   Q(Discription__icontains=qr))
+                results = Place_details.objects.filter(g)
+                if list(results)==[]:
+                    result2='No results found'
+                
+            except: result2='No results found'
    
     
     

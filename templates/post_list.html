@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 {% for i in P_list %}
-   <a href="{{ i.get_absolute_url }}">{{i}}</a></br>
+   <a href="{{ i.get_absolute_url }}" style="color:#1E90FF">{{i}}</a></br>
 {% endfor %}
 
 {% endblock %}

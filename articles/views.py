@@ -10,6 +10,6 @@ def art_list(request):
 
 def Article_view(request,article_id):
     artic = Article_details.objects.get(pk=article_id)
-    html_article= html_format(artic.Article)
+    #html_article= html_format(artic.Article)
     return render(request,'articles.html',locals())
     

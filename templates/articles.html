@@ -2,14 +2,16 @@
 {% load comments %}
 
 {% block content %}
+
+
+<div style="border-radius: 5px;height:auto;width:50%;border:;margin:auto;margin-top: 10px;padding: 10px;margin-left:;overflow:hidden;text-align:justify;">
+<h2 style="text-align:center;font-weight: bold">{{artic.Title}}</h2>
 {% if artic.Pic %}
-<div class='twoo'><img src="{{artic.Pic.url}}" style="margin:auto;height:20%;witdth:20%" alt="image"></img></div>
+<img src="{{artic.Pic.url}}" style="margin:auto;height:auto;width:40%;display:block" alt="image"></img>
 {% endif %}
 
-<div style="border-radius: 5px;height:auto;width:50%;border:;margin:auto;margin-top: 10px;padding: 10px;margin-left:;overflow:hidden;text-align:left;">
 
-<h2 style="text-align:center;font-weight: bold">{{artic.Title}}</h2>
-<p style="text-align:center"> {{artic.Article}}</p></br>
+<p style="text-align:center"> {{artic.Article|linebreaks}}</p></br>
 
 <h3>Post a comment</h3>
 {% render_comment_form for artic %}

@@ -2,8 +2,11 @@
 <html>
 <head>
 {% load static %}
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="{% static 'css/css.css' %}" type="text/css" rel="stylesheet">
+<link href="https://cdn.rawgit.com/levi-p/aff/master/details/static/css/css.css" rel="stylesheet">
+
 <style>
 .sidenav {
     width: 20%;
@@ -19,10 +22,12 @@
 }
 a {
 color:#1E90FF;
+text-decoration:none;
 }
 
 a:hover {
     color:orange;
+    
 }
 </style>
 {% block title %}
@@ -46,9 +51,9 @@ a:hover {
 <div style="position:relative;top:-15px;float:left;border:;height:70%;width:70%;margin-bottom:3px;"><img src="{% static 'round.png' %}" style="width:31%;height:92%;" alt="gg">
 </div>
 </div>
-<div class="one" style="width:25%;height:190px;float:right;clear:none;border:;border-bottom:2px solid white;background: linear-gradient(to right,white,white );box-shadow: 0 0px 0px;padding:5px;text-align:center">
-    <div id='ntyet' style="padding:0px;position:relative;top:-4px">
-<div style="height:40%;witdth;100%;border:0.5px solid #191940;text-align:center;background-color:#191940;border-radius:5px;padding:0px"><h2 style="color:orange">Welcome!</div>
+<div class="one" style="width:25%;height:190px;float:right;clear:none;border:;border-bottom:2px solid white;background: linear-gradient(to right,white,white );box-shadow: 0 0px 0px;padding:5px;text-align:center;overflow:hidden">
+    <div id='ntyet' style="padding:0px;position:relative;top:-4px;">
+<div style="height:40%;witdth;100%;border:0.5px solid #191940;text-align:center;background-color:#191940;border-radius:5px;padding:0px;"><h2 style="color:orange">Welcome!</div>
 <p style="color:#867abe;text-size:8px;">We provide  you with uptodate information on accomodation in places you are visiting in Malawi. We hope to give you an amazing experience. </p></div>
 
 </div>
@@ -67,14 +72,31 @@ a:hover {
 </div>-->
 
 <div class="sidenav" style="border:" >
-<form action="{% url 'home' %}" method="GET">
-{% csrf_token %}
-{{form.as_table}}
-{{results}}
-</br>
-<input type="submit" value="search" style="background-color: orange;border-radius: 5px;" id="but"></form>
-
 <div style="text-size:2px;"> <a href="{% url 'Det:details' %}" style="text-decoration:none;"><p> Start Here</p></a>
+<form action="{% url 'home' %}" method="GET">
+{% comment %}{% csrf_token %}
+{{form.as_table}}{% endcomment %}
+<input type="text" name='q' value="search" style="background-color: ;border-radius: 5px;" id="but"></br>
+<input type="submit" value="search" style="background-color: orange;border-radius: 5px;" id="but"></form>
+<p>
+{% if results %}
+Results for {{qr}}:</br>
+{% for i in results %}
+
+    <a href="{{i.get_absolute_url}}" style="color:#1E90FF">{{i}}</a></br>
+
+
+
+{% endfor %}
+
+{% endif %}
+{{result2}}
+</p>
+
+</br>
+
+
+
 </div>
 
 </div>
