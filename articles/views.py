@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import Comments,Article_details
-from zinnia.markups import html_format
+#from zinnia.markups import html_format
 
 # Create your views here.
 

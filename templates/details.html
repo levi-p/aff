@@ -13,7 +13,7 @@ ul a{
 <html>
 <body>
 {% block content %}
-<div style="float:left;border:;height:20%;width:20%;color:;">
+<!--<div style="float:left;border:;height:20%;width:20%;color:;">
 
 <ul>
 <h3>Places in :</h3>
@@ -21,13 +21,13 @@ ul a{
     <a href="#" style="text-decoration: none;"><li style="color:#1E90FF;display: block;">Blantyre</li></a></br>
     <a href="#" style="text-decoration: none;"><li style="color:#1E90FF;display: block;">Mzuzu</li></a></br>
 </ul>
-</div>
+</div>-->
 <div class="done">
 {% for i in P_details %}
 
-<div class='twoood' style="overflow:hidden;float:left">
+<div class='twoood' style="overflow:hidden;float:">
    <p>{% if i.Pics %}
-   <img src="{{i.Pics.url}}" style="height:90px;float:left;width:70px;border:1px solid #1E90FF;margin:2px;" alt='ff'></br>
+   <img src="{{i.Pics.url}}" style="height:auto;float:left;width:25%;border:1px solid #1E90FF;margin:2px;" alt='ff'></br>
    {% else %}
    <img src="{% static 'd.png' %}".crop.680x680 alt='dpdp' style="height:90px;float:left;width:70px;border:1px solid #1E90FF;margin:2px;"></br>
    
@@ -38,7 +38,8 @@ ul a{
    <a href='{{i.get_absolute_url}}' style="color:#1E90FF">{{i.Name}}</br></a>
    {{i.Location}}</br>
    {{i.Category}}</p>
-   <a href='{{i.get_absolute_url}}' style="background-color:green;color:white;text-decoration:none">Click to View Place Details</a>
+   <div style='clear:both'><a href='{{i.get_absolute_url}}' style="background-color:green;color:white;text-decoration:none;">Click to View Place Details</a>
+   </div>
 </div>
 
    

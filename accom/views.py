@@ -1,10 +1,11 @@
 from django.shortcuts import render
-from details.models import Home_page_pic,Place_details
+from details.models import Home_page_pics,Place_details,Social_ps
 from forms import search_form
 from django.db.models import Q
 
 def home(request):
-    H_p=Home_page_pic.objects.get(_active='eya')
+    H_p=Home_page_pics.objects.filter(_active='eya')
+    sp=Social_ps.objects.filter(_active='owo')
     
     if request.method=='GET':
         form=search_form(request.POST)

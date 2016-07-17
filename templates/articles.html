@@ -11,7 +11,7 @@
 {% endif %}
 
 
-<p style="text-align:center"> {{artic.Article|linebreaks}}</p></br>
+<p style="text-align:left;color:#696969 "> {{artic.Article|safe}}</p></br>
 
 <h3>Post a comment</h3>
 {% render_comment_form for artic %}

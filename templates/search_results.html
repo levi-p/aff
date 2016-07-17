@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+{% if results %}
+Results for {{qr}}:</br>
+{% for i in results %}
+
+    <a href="{{i.get_absolute_url}}" style="color:#1E90FF">{{i}}</a></br>
+
+
+
+{% endfor %}
+
+{% endif %}
+{{result2}}
+
+{% endblock %}
+

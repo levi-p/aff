@@ -31,13 +31,20 @@ class Place_details(models.Model):
     def __str__(self):
         return self.Name
 
-class Home_page_pic(models.Model):
+class Home_page_pics(models.Model):
       Hpic=models.ImageField(blank=True)
-      Dis= models.TextField()
-      _active=models.CharField(max_length= 30)
+      Dis= models.TextField(blank=True)
+      _active=models.CharField(max_length= 30,blank=True)
+      Name=models.CharField(max_length = 30,blank=True)
+      def __str__(self):
+        return self.Name
+
+class Social_ps(Home_page_pics): 
+      
+      
+      def __str__(self):
+        return self.Name
+
+      
 
 
-
-
-    
-    

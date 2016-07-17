@@ -33,10 +33,12 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    
+    
     'django.contrib.admin',
     'django.contrib.auth',
-    'django.contrib.sites',
     'django.contrib.contenttypes',
+    'django.contrib.sites',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
@@ -44,6 +46,8 @@ INSTALLED_APPS = [
     'details',
     'articles',
     'bootstrap3',
+    #'django_social_share_settings',
+    
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -81,12 +85,26 @@ WSGI_APPLICATION = 'accom.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+if DEBUG == 'Trued' :
+  DATABASES = {
+      'default': {
+          'ENGINE': 'django.db.backends.postgresql_psycopg2',
+         'NAME': 'notlevi',
+          'USER': 'postgres',
+          'PASSWORD':'levi20levi20',
+          'HOST':'localhost',
+          'PORT':'5432',
+      }
+  }
+else: 
+
+
+     DATABASES = {
+         'default': {
+             'ENGINE': 'django.db.backends.sqlite3',
+             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+         }
+     }
 
 
 # Password validation
