@@ -11,12 +11,13 @@ body > #container { height: auto; min-height: 100%; }
 
 .sidenav {
     width: 20%;
-    height: 50%;
-    border:/* 2px solid red;*/;
+    height: auto;
+    border:/*2px solid red*/;
     float: left;
     position: relative;
     bottom: -5%;
-    clear: both; }
+    clear: both; 
+    overflow: hidden;}
 }
 
 
