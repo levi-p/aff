@@ -263,7 +263,7 @@ text-align: center;
 
 .about {
 height:auto;
-width:auto;
+width:100%;
 margin:auto;
 background-color:#cec6f3;
 text-align: center;
@@ -281,7 +281,7 @@ margin:2px;
 .article {
 border-radius: 5px;
 height:auto;
-width:auto;
+width:100%;
 border:;
 margin:auto;
 margin-top: 10px;
@@ -353,7 +353,7 @@ height:auto;}
 
 
 #w-note {
-width:auto;
+width:100%;
 heifght:auto;
 floaet:right;
 clear:none;
