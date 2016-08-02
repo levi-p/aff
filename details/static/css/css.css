@@ -126,22 +126,22 @@ li {
 .done {
     display:block;
     floact: left;
-    width: 50%;
+    width: 40%;
     height: 100%;
     kkoverflow: auto;
     margin: auto;
-    dborder:2px solid green ;
+    bordejr:2px solid green ;
 }
 
 .twoood {
-    width: 80%;
+    width: 96%;
     height: 25%;
     
     border: 2px solid orange;
     padding: 10px;
     margin-top:20px;
     margin-left:10px;
-    box-shadow:0 5px 5px;
+    box-shadohw:0 5px 5px;
     border-radius: 5px;
    }
 
