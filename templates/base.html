@@ -46,7 +46,7 @@ a:hover {
 
 <ul>
     
-    <li><div stsyle="position:relative;top:-50px;float:left;border:;height:200px;width:70%;margind:5px;"><img src="{% static 'Affix2.png' %}" style="width:20%;height:auto;" alt="gg">
+    <li><div stsyle="position:relative;top:-50px;float:left;border:;height:200px;width:70%;margind:5px;"><img src="{% static 'Affix2.png' %}" stylhe="" id="logo" alt="gg">
 </div></li>
     <a href="/"><li>Home</li></a>
     <a href="{% url 'Det:details' %}"><li>Accomodation</li></a>
@@ -73,7 +73,7 @@ a:hover {
 <div style="border-top:4px solid #191940;width:100%;height:auto;clear:both;border-bottom:2px solid white;position:relative;top:3px;background-colofr:gray;">
 {% block content %}
 
-<div class="one" style="width:40%;height:120px;floaet:right;clear:none;border:;border-bottom:2px solid white;background: linear-gradient(to right,white,white );box-shadow: 0 0px 0px;padding:5px;text-align:center;overflow:hidden;margin:auto;positionf:relative;top:-55px;">
+<div class="one" id="w-note" stynotusetle="width:40%;height:120px;floaet:right;clear:none;border:;border-bottom:2px solid white;background: linear-gradient(to right,white,white );box-shadow: 0 0px 0px;padding:5px;text-align:center;overflow:hidden;margin:auto;positionf:relative;top:-55px;">
     <div id='ntyet' style="padding:0px;position:relative;top:-4px">
 <div style="height:40%;witdth;100%;border:0.5px solid white;text-align:center;backgrcound-color:#191940;border-radius:5px;padding:0px;"><h2 style="color:orange">Welcome!</div>
 <p style="color:#867abe;text-size:8px;">We provide  you with uptodate information on accomodation in places you are visiting in Malawi. We hope to give you an amazing experience. </p></div>
@@ -130,7 +130,7 @@ Results for {{qr}}:</br>
 
 {% for H_p in H_p %}
 
-<div class='twoo' ><img src="{{H_p.Hpic.url}}" id="twoooimg" ></img>
+<div class="twoo" ><img src="{{H_p.Hpic.url}}" id="twoooimg" ></img>
 
 <!--<div class="fb-follow" data-href="https://www.facebook.com/Affix-Malawi-1040525819373121" data-width="6" data-height="6" data-layout="standard" data-size="small" data-show-faces="true"></div>-->
 
@@ -145,10 +145,10 @@ Results for {{qr}}:</br>
 
 
 </div> 	
-<!-- of SP-->
+<!-- of SP
 <div class="sp" style="width:25%;float:right;position:relative;z-index: ;background-color: white;height: 90%;clear;top:-680px;">
 {% include 'sp.html' %}
-</div>
+</div>-->
 {% endblock %}
 <!--<div class="one" style="position:fixed;bottom:0%;color:white;font-weight:bold;width:100%;">
 <div style="position:relative;text-align:center;width:100%;">&copy; affixmw 2016</div></div>-->

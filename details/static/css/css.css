@@ -17,7 +17,7 @@ body > #container { height: auto; min-height: 100%; }
     position: relative;
     bottom: -5%;
     clear: both; 
-    overflow: hidden;}
+    overflow: hidden;
 }
 
 
@@ -97,6 +97,7 @@ li {
 }
 
 /* of 2nd image */
+
 .twoo {
     width: 40%;
     height: 35%;
@@ -105,9 +106,15 @@ li {
     padding: 10px;
     margin-top:20px;
     
+    
     box-shadow:0 0px 0px;
     border-radius: 5px;
 }
+
+
+
+
+
  /* of third image */
 
 .twooo {
@@ -181,4 +188,201 @@ li {
     padding: ;
 
 }
+
+#w-note {
+width:40%;
+height:120px;
+floaet:right;
+clear:none;
+border:;
+border-bottom:2px solid white;
+background: linear-gradient(to right,white,white );
+box-shadow: 0 0px 0px;
+padding:5px;text-align:center;
+overflow:hidden;margin:auto;
+positionf:relative;
+top:-55px;
+}
+
+#logo {
+width:20%;
+height:auto;}
+
+#place-details {
+border-radius: 5px;
+height:auto;
+width:50%;
+border:;
+margin:auto;
+margin-top: 10px;
+padding: 10px;
+margin-left:;
+overflow:hidden;
+text-align:justify;}
+
+
+#place-d-img {
+width:40%;
+height:50%;
+margin:auto;
+display:block;
+margin-top:5px;
+}
+
+.article {
+border-radius: 5px;
+height:auto;
+width:50%;
+border:;
+margin:auto;
+margin-top: 10px;
+padding: 10px;
+margin-left:;
+overflow:hidden;
+text-align:justify;}
+
+#p-list-img {
+height:auto;
+float:left;
+width:25%;
+border:1px solid #1E90FF;
+margin:2px;
+}
+
+.about {
+height:100%;
+width:35%;
+margin:auto;
+background-color:#cec6f3;
+text-align: center;
+}
+
+
+/* mobile site */
+@media screen and (max-width: 500px) {
+
+.about {
+height:auto;
+width:auto;
+margin:auto;
+background-color:#cec6f3;
+text-align: center;
+}
+
+
+#p-list-img {
+height:auto;
+float:left;
+width:42%;
+border:1px solid #1E90FF;
+margin:2px;
+}
+
+.article {
+border-radius: 5px;
+height:auto;
+width:auto;
+border:;
+margin:auto;
+margin-top: 10px;
+padding: 10px;
+margin-left:;
+overflow:hidden;
+text-align:justify;}
+
+/* in discription */
+#place-d-img {
+width:auto%;height:auto;margin:auto;margin-top:5px;display:block;
+}
+
+#place-details {
+border-radius: 5px;height:auto;width:100%;border:;margin:auto;margin-top: 10px;padding: 10px;margin-left:;overflow:hidden;text-align:justify;}
+
+
+.twoood {
+    width: 96%;
+    height: 35%;
+    
+    border: 2px solid orange;
+    padding: 10px;
+    margin-top:20px;
+    margin-left:10px;
+    box-shadohw:0 5px 5px;
+    border-radius: 5px;
+   }
+
+
+.done {
+    display:block;
+    floact: left;
+    width: 100%;
+    height: auto;
+    kkoverflow: auto;
+    margin: auto;
+    bordejr:2px solid green ;
+}
+
+
+
+.sidenav {
+    width: 100%;
+    height: auto;
+    border:/*2px solid red*/;
+    float: left;
+    position: relative;
+    bottom: -5%;
+    clear: both; 
+    overflow: hidden;
+}
+
+
+#logo {
+width:50%;
+height:auto;}
+
+#twoooimg{
+    height: 50%;
+    width:90%;
+    margin: 5px;
+    border-radius: ;
+    opacity:1;
+    padding: ;
+
+}
+
+
+
+#w-note {
+width:auto;
+heifght:auto;
+floaet:right;
+clear:none;
+border:;
+border-bottom:2px solid white;
+background: linear-gradient(to right,white,white );
+box-shadow: 0 0px 0px;
+padding:5px;text-align:center;
+overflow:hidden;margin:auto;
+positionf:relative;
+top:-55px;
+}
+
+
+.twoo {
+    width: auto;
+    height: auto;
+    margin: auto;
+    bkorder: 1px solid orange;
+    padding: 10px;
+    margin-top:20px;
+    
+    
+    box-shadow:0 0px 0px;
+    border-radius: 5px;
+}
+}
+
+
+
+
 
