@@ -9,6 +9,15 @@ body > #container { height: auto; min-height: 100%; }
     box-sizing: border-box;
 }
 
+
+
+.contain-body {
+bodrder:2px solid red;width:100%;height:auto;position:relative;top:-150px;background-color:#eaeaea
+
+
+
+}
+
 .sidenav {
     width: 20%;
     height: auto;
@@ -22,7 +31,7 @@ body > #container { height: auto; min-height: 100%; }
 
 
 .twoo {
-    width: 40%;
+    width: 90%;
     height: 60%;
     margin: auto;
     border: 1px solid orange;
@@ -43,7 +52,7 @@ body > #container { height: auto; min-height: 100%; }
     margin-bottom: 5px;
 
     border-radius: ;
-    opacity:0.8;
+    opaecity:0.8;
     padding: ;
 
 }
@@ -148,6 +157,9 @@ li {
 /* of details */
 
 .done {
+
+    
+   
     display:block;
     floact: left;
     width: 40%;
@@ -197,20 +209,14 @@ li {
 
 
 
-#w-note {
-width:40%;
-height:120px;
-floaet:right;
-clear:none;
-border:;
-border-bottom:2px solid white;
-background: linear-gradient(to right,white,white );
-box-shadow: 0 0px 0px;
-padding:5px;text-align:center;
-overflow:hidden;margin:auto;
-positionf:relative;
-top:-55px;
+.w-note {width:15%;height:60%;float:right;margin-right:170px;background-color:white;position:relative;top:10px;border-radius:5px;opacity:0.8
 }
+
+
+.search-div {
+width:40%;height:90%;margin:auto;background-color:#191930;position:relative;top:10px;border-radius:5px;opacity:0.9
+}
+
 
 #logo {
 width:20%;
@@ -275,7 +281,7 @@ text-align: center;
 
 
 .twoo {
-    width: 40%;
+    width: 90%;
     height: 50%;
     margin: auto;
     border: 1px solid orange;
