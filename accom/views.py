@@ -2,6 +2,7 @@ from django.shortcuts import render
 from details.models import Home_page_pics,Place_details,Social_ps
 from forms import search_form
 from django.db.models import Q
+from django.http import HttpResponseRedirect
 
 def home(request):
     H_p=Home_page_pics.objects.filter(_active='eya')
@@ -21,6 +22,8 @@ def home(request):
                     result2='No results found'
                 
             except: result2='No results found'
+            #return HttpResponseRedirect('results.html')
+            
    
     
     

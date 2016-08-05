@@ -10,6 +10,9 @@
  <link rel="stylesheet" type="text/css" href="{% static "css/bootstrap/bootstrap.css" %}">
 
 <style>
+
+
+
 .topleft {
     position: absolute;
     top: 8px;
@@ -18,9 +21,6 @@
 }
 
 
-#but{
-   background-color: orange;
-}
 a {
 color:#1E90FF;
 text-decoration:none;
@@ -85,10 +85,12 @@ a:hover {
 <div style="border-top:4px solid #191940;width:100%;height:auto;clear:both;border-bottom:2px solid white;position:relative;top:3px;background-colofr:gray;">
 
 {% block content %}
-<div style="background-image: url({% static 'mw3.jpg' %}) ;width:100%;height:43%;background-repeat:initial;position:relative;top:-15px;
+<div id="bgimg" style="background-image: url({% static 'mw3.jpg' %}) 
 ">
 
-<div class="w-note" style="">
+
+
+<div class="w-note" stydle="width:100%;height:auto;float:right;margin-left:170px;background-color:blue;position:relative;top:10px;border-radius:5px;opacity:0.8">
 
 <div style="height:25%;witdth;100%;border:0.5px solid white;text-align:center;background-color:white;border-radius:5px;padding:0px;"><h2 style="color:orange">Welcome!</div>
 <p style="color:;font-weight:bold;text-size:8px;text-align:center;">We provide  you with uptodate information on accomodation in Malawi.</p>
@@ -97,36 +99,28 @@ a:hover {
 </div>
 
 
- <div class="search-div" style="">
+ <div class="search-div" stylde="background-color:red;opacity:1;">
 
-<div style="text-size:2px;width:30%;position:relative;top:10px;margin:auto;color:orange"> <h3> START HERE</h3>
-</p></div>
+<div class="search-text" stffydle="text-size:2px;width:30%;position:relative;top:10px;margin:auto;color:orange">  <p style="font-weight:bold;">START HERE</p>
+
+
+
+</div>
 
 
 
 <form action="{% url 'home' %}" method="GET">{% csrf_token %}
-{% comment %}
-{{form.as_table}}{% endcomment %}
 
-<div style="width:70%;margin:auto;position:relative;top:90px;">
-<input type="text" name='q' value="search" style="background-color:white ;border-radius: 5px;width:80%;" id="but">
-<input type="submit" value="search" style="background-color: orange;border-radius: 5px;" id="but"></form>
+{% if next %}
+    <div><input type="hidden" name="next" value="{{ next }}"/></div>{% endif %}
+
+
+<div class="search-form" style="">
+<input type="text" name='q' value="search" style="" id="but">
+<input type="hidden" name="next" value="{% url 'art:list' %}" />
+<input type="submit" value="search" style="background-color: orange;border-radius: 5px;" id="bfut"></form>
 </div>
 
-<p>
-{% if results %}
-Results for {{qr}}:</br>
-{% for i in results %}
-
-    <a href="{{i.get_absolute_url}}" style="color:#1E90FF">{{i}}</a></br>
-
-
-
-{% endfor %}
-
-{% endif %}
-
-{{result2}}
 
 
 
@@ -161,14 +155,33 @@ https://cdn.rawgit.com/levi-p/aff/master/details/static/round.png
 
 <div class="sidenav" style="border:" >
 
+
 </br>
 <div class="fb-like" data-href="https://www.facebook.com/Affixmalawi" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+
+<p>
+{% if results %}
+<h3>Results for {{qr}}:</h3></br>
+{% for i in results %}
+
+    <a href="{{i.get_absolute_url}}" style="color:#1E90FF">{{i}}</a></br>
+
+
+
+{% endfor %}
+
+{% endif %}
+
+{{result2}}
+</p>
 
 
 </div>
 
 
-<div style="width:50%;height:auto;margin:auto;borhder:2px solid red;background-color:#eaeaea;#e5e5e5;border-radius:5px;padding:10px">
+<div class="hp-pics" style="">
+
+
 
 {% for H_p in H_p %}
 
