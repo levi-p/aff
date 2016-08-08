@@ -1,17 +1,34 @@
 {% extends 'base.html' %}
+
+
 {% load comments %}
 
 {% block content %}
 
 
-<div class="article" style="">
-<h2 style="text-align:center;font-weight: bold">{{artic.Title}}</h2>
+
+
+
+
+<div style="" class="Article_text author">
+{% if artic.A_Name %}
+<img src="{{artic.A_pic.url}}" style="margin:auto;height:auto;width:70%;display:block;border-radius:5px;gborder: 2px solid red;" alt="img"> </img><br/>
+<h3>{{artic.A_Name}}<h3>
+{% endif %} <p style="color:white"></p> </div>
+
+
+
+<div class="article " style="margin-right:-120px">
+
 {% if artic.Pic %}
-<img src="{{artic.Pic.url}}" style="margin:auto;height:auto;width:40%;display:block" alt="image"></img>
+<img src="{{artic.Pic.url}}" style="margin:auto;height:auto;width:80%;display:block" alt="image"></img>
 {% endif %}
+<h2 style="text-align:center;font-weight: bold">{{artic.Title}}</h2>
 
 
-<p style="text-align:left;color:#696969 "> {{artic.Article|safe}}</p></br>
+<div style="" class="Article_text">
+
+ {{artic.Article|safe|linebreaksbr}}</div></br>
 
 <h3>Post a comment</h3>
 {% render_comment_form for artic %}

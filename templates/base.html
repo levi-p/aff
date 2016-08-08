@@ -109,7 +109,7 @@ a:hover {
 
 
 
-<form action="{% url 'home' %}" method="GET">{% csrf_token %}
+<form action="{% url 'search' %}" method="GET">{% csrf_token %}
 
 {% if next %}
     <div><input type="hidden" name="next" value="{{ next }}"/></div>{% endif %}

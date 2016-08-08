@@ -14,10 +14,18 @@ class Comments(models.Model):
         return self.Name
 
 
+#class author(models.Model):
+    
+
 class Article_details(models.Model):
-    Title = models.CharField(max_length=30)
+    Title = models.CharField(max_length=120)
     Article = models.TextField(blank=True)
     Pic = models.ImageField(blank=True)
+
+
+    A_Name=models.CharField(max_length=50,blank=True)
+    A_pic=models.ImageField(blank=True)
+
 
     @property
     def html_content(self):

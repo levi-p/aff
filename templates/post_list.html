@@ -1,8 +1,15 @@
 {% extends 'base.html' %}
 {% block content %}
-<div style="height:50%;border:;width:100%;margdin:auto;">
+
+
+
+
+<div style="" class="post_list">
 {% for i in P_list %}
- <p>  <a href="{{ i.get_absolute_url }}" style="color:#1E90FF">{{i}}</a></p></br>
+<div style="background-color:#eaeaea">
+ <h3>  <a href="{{ i.get_absolute_url }}" style="color:black">{{i}}</a></h3>
+<p class="Article_text">{{i.Article|truncatechars:200}} <a href="{{ i.get_absolute_url }}" style="color:#1E90FF">Read more</a></p>
+</div>
 {% endfor %}
 </div>
 

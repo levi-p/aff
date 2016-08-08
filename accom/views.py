@@ -8,6 +8,14 @@ def home(request):
     H_p=Home_page_pics.objects.filter(_active='eya')
     sp=Social_ps.objects.filter(_active='owo')
     
+            #return HttpResponseRedirect('results.html')
+            
+   
+    
+    
+    return render(request,'base.html',locals())
+
+def search(request):
     if request.method=='GET':
         form=search_form(request.POST)
         qr=request.GET.get('q','')
@@ -22,12 +30,10 @@ def home(request):
                     result2='No results found'
                 
             except: result2='No results found'
-            #return HttpResponseRedirect('results.html')
-            
-   
     
-    
-    return render(request,'base.html',locals())
+    return render(request,'search_results.html',locals())
+
+
 
 def About(request):
     return render(request,'about.html',locals())

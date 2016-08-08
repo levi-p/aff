@@ -36,6 +36,9 @@ class Home_page_pics(models.Model):
       Dis= models.TextField(blank=True)
       _active=models.CharField(max_length= 30,blank=True)
       Name=models.CharField(max_length = 30,blank=True)
+      class Meta:
+        ordering = ['Name']
+      
       def __str__(self):
         return self.Name
 

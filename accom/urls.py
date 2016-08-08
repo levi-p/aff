@@ -25,6 +25,7 @@ from . import views
 urlpatterns = [
     
     url(r'^about/', views.About, name='about'),
+    url(r'^search/', views.search, name='search'),
     url(r'^comments/', include('django_comments.urls')),
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.home ,name='home'),
