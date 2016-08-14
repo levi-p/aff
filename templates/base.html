@@ -7,7 +7,9 @@
 
 <link href="httdps://cdn.rawgit.com/levi-p/aff/master/details/static/css/css.css" rel="stylesheet">
 <link href="{% static 'css/css.css' %}" type="text/css" rel="stylesheet">
- <link rel="stylesheet" type="text/css" href="{% static "css/bootstrap/bootstrap.css" %}">
+ <link rel="stylesheet" type="text/css" href="{% static "css/bootstrap/css/bootstrap.css" %}">
+<script src="{% static "css/bootstrap/js/jquery.min.js" %}"></script>
+  
 
 <style>
 
@@ -30,7 +32,14 @@ a:hover {
     color:orange;
     
 }
+
+li {font-size:20px;margin-right:1px }
 </style>
+
+<script src="{% static "css/bootstrap/js/bootstrap.min.js" %}"></script>
+
+
+
 {% block title %}
 <title>Affixmw</title>
 {% endblock %}
@@ -46,16 +55,46 @@ a:hover {
 }(document, 'script', 'facebook-jssdk'));</script>
 
 
-<div id="container" stddyle="border: ;background-color;blued">
-    <div id="content" stylde="backfground-color:#191940;">
+
+
+   
+
+
+<div id="container" stylee="border: ;background-color;red">
+    <div id="content" style="background-color:red;">
 <iemg src="{% static 'Affix2.png' %}" style="width:20%;height:auto;" alt="gg">
 
 
-<div class="one" style="width:100%;height:auto;float:left;padding:0px;">
 
-<ul>
+        <div class="one" style="width:100%;height:auto;float:left;padding:0px;">
+
+
+
+  
+
+<nav class="nadvbar navbar-inverse" style="background-color: #191930;border-coflor: #080808" role="navigation">
+           <div class="navbar-header">
+      <button styfle="background-color:white" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+
+      
+            <div id="affmg" stsyle="position:relative;top:-50px;float:left;border:;height:200px;width:70%;margind:5px;"><img src="{% static 'Affix2.png' %}" stylhe="" id="logo" alt="gg">
+            </div>
+
+
+           </div>
+
+
+
+
+                <div class="collapse navbar-collapse" id="myNavbar">
+<ul clasds="nav navbar-nav" style="padding-left:0;">
+
     
-    <li><div stsyle="position:relative;top:-50px;float:left;border:;height:200px;width:70%;margind:5px;"><img src="{% static 'Affix2.png' %}" stylhe="" id="logo" alt="gg">
+    <li><div id="affmg2" styele="background-color:red;"><img src="{% static 'Affix2.png' %}" stylhe="" id="logo" alt="gg">
 </div></li>
     <a href="/"><li>Home</li></a>
     <a href="{% url 'Det:details' %}"><li>Accomodation</li></a>
@@ -63,10 +102,16 @@ a:hover {
     <a href="{% url 'about' %}"><li>About us</li></a>
     
 </ul>
+                 </div>
 
 </div>
 
 
+
+</div>
+
+
+</nav>
 
 <!--<div style="bordeer:2px solid red;height:200px;width:100% ;background-color:#191940;opacity:;position:relative;top:110px;">
 
@@ -82,21 +127,21 @@ a:hover {
 </div>-->
 
 
-<div style="border-top:4px solid #191940;width:100%;height:auto;clear:both;border-bottom:2px solid white;position:relative;top:3px;background-colofr:gray;">
+<div style="border-top:2px solid #191940;width:100%;height:auto;clear:both;border-bottom:2px solid white;position:relative;top:3px;background-colofr:gray;">
 
 {% block content %}
-<div id="bgimg" style="background-image: url({% static 'mw3.jpg' %}) 
+<div id="bgimg" style="position:relative;top:3px;background-image: url({% static 'mw3.jpg' %}) 
 ">
 
 
 
-<div class="w-note" stydle="width:100%;height:auto;float:right;margin-left:170px;background-color:blue;position:relative;top:10px;border-radius:5px;opacity:0.8">
+<!--<div class="w-note" stydle="width:100%;height:auto;float:right;margin-left:170px;background-color:blue;position:relative;top:10px;border-radius:5px;opacity:0.8">
 
 <div style="height:25%;witdth;100%;border:0.5px solid white;text-align:center;background-color:white;border-radius:5px;padding:0px;"><h2 style="color:orange">Welcome!</div>
 <p style="color:;font-weight:bold;text-size:8px;text-align:center;">We provide  you with uptodate information on accomodation in Malawi.</p>
 
 
-</div>
+</div>-->
 
 
  <div class="search-div" stylde="background-color:red;opacity:1;">
@@ -109,15 +154,15 @@ a:hover {
 
 
 
-<form action="{% url 'search' %}" method="GET">{% csrf_token %}
+<form action="{% url 'search' %}" method="GET">{% comment %} {% csrf_token %}{% endcomment %}
 
 {% if next %}
     <div><input type="hidden" name="next" value="{{ next }}"/></div>{% endif %}
 
 
 <div class="search-form" style="">
-<input type="text" name='q' value="search" style="" id="but">
-<input type="hidden" name="next" value="{% url 'art:list' %}" />
+<input type="text" name='q' value="search"   onfocus="if (this.value=='search') this.value='';" style="" id="but">
+<!--<input type="hidden" name="next" value="{% url 'art:list' %}" />-->
 <input type="submit" value="search" style="background-color: orange;border-radius: 5px;" id="bfut"></form>
 </div>
 
@@ -186,8 +231,11 @@ https://cdn.rawgit.com/levi-p/aff/master/details/static/round.png
 {% for H_p in H_p %}
 
 <div class="twoo" style="height:50d%;widsth:90%;background-color:white" >
-<div><p style="color:#1E90FF;text-align:center;">{{H_p.Dis}}<p></div>
-<img src="{{H_p.Hpic.url}}" id="twoooimg" stdyle="opacity:0.8;height:80%" ></img>
+<div>
+
+
+<a href='/search/?q={{H_p.Location}}'><p style="color:#1E90FF;text-align:center;">{{H_p.Dis}}<p></div>
+<img src="{{H_p.Hpic.url}}" id="twoooimg" stdyle="opacity:0.8;height:80%" ></img></a>
 
 <!--<div class="fb-follow" data-href="https://www.facebook.com/Affix-Malawi-1040525819373121" data-width="6" data-height="6" data-layout="standard" data-size="small" data-show-faces="true"></div>-->
 

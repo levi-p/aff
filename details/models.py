@@ -32,6 +32,7 @@ class Place_details(models.Model):
         return self.Name
 
 class Home_page_pics(models.Model):
+      Location= models.CharField(max_length=30, blank=True)
       Hpic=models.ImageField(blank=True)
       Dis= models.TextField(blank=True)
       _active=models.CharField(max_length= 30,blank=True)
