@@ -13,9 +13,12 @@
 <div style="" class="post_list">
 {% for i in P_list %}
 <div style="background-color:#eaeaea">
+{% if i.Pic %}
+<img src="{{i.Pic.url}}" style="margin:auto;height:auto;width:80%;display:block" alt="image"></img>
+{% endif %}
  <h3>  <a href="{{ i.get_absolute_url }}" style="color:black">{{i}}</a></h3>
 <p class="Article_text">{{i.Article|truncatechars:200}} <a href="{{ i.get_absolute_url }}" style="color:#1E90FF">Read more</a></p>
-</div>
+</div></br>
 {% endfor %}
 </div>
 

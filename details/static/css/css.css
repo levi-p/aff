@@ -8,7 +8,7 @@ body > #container { height: auto; min-height: 100%; }
 
 
 
-.Article_text {text-align:left;color:#696969 }
+.Article_text {text-align:left;color:#696969;font-size:20px }
 
  * {
     box-sizing: border-box;
@@ -129,6 +129,7 @@ a.active{
 
 li {
     display: inline;
+    
     color: white;
     font-weight: bold;
     text-decoration: none;
@@ -287,10 +288,11 @@ margin:2px;
 }
 
 .about {
+font-weight:bold;
 height:100%;
 width:35%;
 margin:auto;
-background-color:#cec6f3;
+background-color:#eaeaea;
 text-align: center;
 }
 
