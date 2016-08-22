@@ -20,10 +20,16 @@ from django.conf.urls.static import static
 from django.conf import settings
 from django.views.static import serve
 from . import views
+from django.contrib.auth import views as auth_views
+
 
 
 urlpatterns = [
-    
+    url(r'^booking/', include('booking.urls',namespace='book')),
+    url('^', include('django.contrib.auth.urls')),
+    url(r'^accounts/login/$', auth_views.login ,{'redirect_field_name':'c.html'},name='login'),
+    url(r'^accounts/login/$', auth_views.password_reset),
+    url(r'^accounts/profile/$', views.home),
     url(r'^about/', views.About, name='about'),
     url(r'^search/', views.search, name='search'),
     url(r'^comments/', include('django_comments.urls')),

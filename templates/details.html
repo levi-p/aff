@@ -15,21 +15,16 @@ ul a{
 
 
 {% block content %}
-<!--<div style="float:left;border:;height:20%;width:20%;color:;">
+<h2 style="text-align:center;font-weght:bold">All Places</h2>
+<div style="background-color:#eaeaea;">
 
-<ul>
-<h3>Places in :</h3>
-    <a href="#" style="text-decoration: none;"><li style="color:#1E90FF;display: block;">Lilongwe</li></a></br>
-    <a href="#" style="text-decoration: none;"><li style="color:#1E90FF;display: block;">Blantyre</li></a></br>
-    <a href="#" style="text-decoration: none;"><li style="color:#1E90FF;display: block;">Mzuzu</li></a></br>
-</ul>
-</div>-->
+
 <div class="done">
 
 
 {% for i in P_details %}
 
-<div class='twoood' style="overflow:hidden;float:;height:auto;position:relative;z-index:-10px">
+<div class='twoood' style="overflow:hidden;float:;height:auto;position:relative;z-index:-10px;background-color:white;margin-bottom:5%;">
    <div>{% if i.Pics %}
    <img src="{{i.Pics.url}}" id="p-list-img" style="width:40%" alt='ff'></img>
 
@@ -59,6 +54,7 @@ ul a{
 
    
 {% endfor %}
+</div>
 </div>
 
 {% endblock %}

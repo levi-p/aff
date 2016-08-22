@@ -1,18 +1,20 @@
 from django.shortcuts import render
-from .models import Home_page_pics,Place_details,Social_ps
+from .models import Home_page_pics,Social_ps,place_details
 
 from forms import search_form
 from django.db.models import Q
+from django.contrib.auth.decorators import login_required
 
 
 # Create your views here.
 
 def details(request):
-    P_details=Place_details.objects.all()
+    P_details=place_details.objects.all()
     return render(request,'details.html',locals())
 
+@login_required
 def All_details(request,place_id):
-    P2_details=Place_details.objects.get(pk=place_id)
+    P2_details=place_details.objects.get(pk=place_id)
     return render(request,'place_details.html',locals())
 
 
@@ -27,7 +29,7 @@ def search_results(request):
                 g=(Q(Location__icontains=qr)|
                    Q(Name__icontains=qr)|
                    Q(Discription__icontains=qr))
-                results = Place_details.objects.filter(g)
+                results = place_details.objects.filter(g)
                 if list(results)==[]:
                     result2='No results found'
                 

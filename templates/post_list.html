@@ -8,11 +8,11 @@
 {% block content %}
 
 
+<h2 style="text-align:center;font-weght:bold">All Articles</h2>
 
-
-<div style="" class="post_list">
-{% for i in P_list %}
-<div style="background-color:#eaeaea">
+<div  class="post_list">
+{% for i in P_list|dictsortreversed:'time' %}
+<div style="background-color:#eaeaea;border-radius:5px;padding:50px">
 {% if i.Pic %}
 <img src="{{i.Pic.url}}" style="margin:auto;height:auto;width:80%;display:block" alt="image"></img>
 {% endif %}

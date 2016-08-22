@@ -12,10 +12,19 @@ class Category(models.Model):
     def __str__(self):
         return self.Name
 
-class Place_details(models.Model):
+
+class Roomz(models.Model):
+    RoomName = models.CharField(max_length=30)
+    Occupants = models.IntegerField(blank=True)
+    Price = models.DecimalField(max_digits=100,decimal_places=2,blank=True)
+    RoomPics=models.ImageField(blank=True)
+    def __str__(self):
+        return self.RoomName
+
+class place_details(models.Model):
     Name = models.CharField(max_length = 30)
     Location = models.CharField(max_length=30)
-    Price = models.DecimalField(max_digits=100,decimal_places=2)
+    Room = models.ManyToManyField(Roomz)
     Category = models.ForeignKey(Category)
     Pics = models.ImageField(blank=True)#(upload_to='media')
     Discription=models.TextField(blank=True)
@@ -48,6 +57,8 @@ class Social_ps(Home_page_pics):
       
       def __str__(self):
         return self.Name
+
+
 
       
 

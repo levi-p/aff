@@ -1,13 +1,61 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<div >
-<img src="{{P2_details.Pics.url}}" alt="image" style="" id="place-d-img"></img></div>
 
-<div style="" id="place-details">
-<p>Name:		{{P2_details.Name}}</br>
-Location:	{{P2_details.Location}}</br>
-{{P2_details.category.Name}}</br>
-<p style="color:#696969">{{P2_details.Discription|safe}}</p></p>
+
+
+<div style="background-color:#eaeaea">
+
+<div >
 </div>
+
+<div class="n-place-details" style="">
+
+
+
+
+<div style="" ird="place-details">
+<img src="{{P2_details.Pics.url}}" alt="image" stryle="" id="place-d-img"></img>
+<div id="of-Dis">
+<p>Name:	{{P2_details.Name}}</br>
+{{P2_details.category.Name}}
+<p style="color:#696969">{{P2_details.Discription|safe}}</p><div>
+</div>
+
+
+
+
+
+
+
+<div style="width:100%;heght:auto;border:2px solid #191940;overflow:hidden;padding:2px;background-color:#ffae00;"><h2>Rooms</h2></div>
+
+{% for x in P2_details.Room.all %}
+    <div style="width:100%;height:auto;border-bottom:2px solid #191940;overflow:auto;padding:2px;margin:2px">
+    
+
+<img src="{{x.RoomPics.url}}" alt="image" style="" id="room-d-img"></img>
+
+
+
+
+<div id="price-tag" style="">
+
+
+<span style="font-size:20px;">Room: {{x.RoomName}}</span></br>Price per night:<span style="color:red">    {{x.Price}}</span></br>Occupants: {{x.Occupants}}</br></br>
+
+
+<a href="{% url 'book:booking_create' %}"><span style="font-size:20px;background-color:	#191940;color:white;font-weight;bold;border-radius:5px;padding:5px;margin-top:2px;">Book</span></a>
+</div>
+</div>
+
+{% endfor %}
+
+</div>
+
+
+</div>
+
+
+
 {% endblock %}

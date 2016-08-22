@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from details.models import Home_page_pics,Place_details,Social_ps
+from details.models import Home_page_pics,place_details,Social_ps
 from forms import search_form
 from django.db.models import Q
 from django.http import HttpResponseRedirect
@@ -25,7 +25,7 @@ def search(request):
                 g=(Q(Location__icontains=qr)|
                    Q(Name__icontains=qr)|
                    Q(Discription__icontains=qr))
-                results = Place_details.objects.filter(g)
+                results = place_details.objects.filter(g)
                 if list(results)==[]:
                     result2='No results found'
                 
