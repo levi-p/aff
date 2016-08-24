@@ -4,6 +4,11 @@ from django.db import models
 from django.core.urlresolvers import reverse
 #from zinnia.markups import html_format
 import datetime
+from django.utils import timezone
+
+
+
+now = timezone.now
 
 # Create your models here.
 
@@ -22,7 +27,7 @@ class Article_details(models.Model):
     Title = models.CharField(max_length=120)
     Article = models.TextField(blank=True)
     Pic = models.ImageField(blank=True)
-    time=models.DateField(default=datetime.datetime.now())
+    time=models.DateField(default=now)
     #Id=models.IntegerField(default=self.id)
     A_Name=models.CharField(max_length=50,blank=True)
     A_pic=models.ImageField(blank=True)

@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'articles',
     'bootstrap3',
     'booking',
+    'register',
     #'django_social_share_settings',
     
 ]

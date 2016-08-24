@@ -25,7 +25,9 @@ from django.contrib.auth import views as auth_views
 
 
 urlpatterns = [
+    url(r'^sign_up/', include('register.urls', namespace='Sign_up')),
     url(r'^booking/', include('booking.urls',namespace='book')),
+    url(r'^booking/', include('register.urls',namespace='reg')),
     url('^', include('django.contrib.auth.urls')),
     url(r'^accounts/login/$', auth_views.login ,{'redirect_field_name':'c.html'},name='login'),
     url(r'^accounts/login/$', auth_views.password_reset),

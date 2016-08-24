@@ -12,7 +12,7 @@ def details(request):
     P_details=place_details.objects.all()
     return render(request,'details.html',locals())
 
-@login_required
+#@login_required
 def All_details(request,place_id):
     P2_details=place_details.objects.get(pk=place_id)
     return render(request,'place_details.html',locals())

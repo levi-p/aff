@@ -16,24 +16,25 @@ ul a{
 
 {% block content %}
 <h2 style="text-align:center;font-weght:bold">All Places</h2>
-<div style="background-color:#eaeaea;">
+<div style="background-color:#eaeaea;padding:5px">
 
 
-<div class="done">
+<div class="done" style="padding:5px">
 
 
 {% for i in P_details %}
 
 <div class='twoood' style="overflow:hidden;float:;height:auto;position:relative;z-index:-10px;background-color:white;margin-bottom:5%;">
+<a href='{{i.get_absolute_url}}' style="color:#1E90FF">
    <div>{% if i.Pics %}
-   <img src="{{i.Pics.url}}" id="p-list-img" style="width:40%" alt='ff'></img>
+   <img src="{{i.Pics.url}}" id="p-list-img" style="width:40%;border-radius:5px" alt='ff'></img>
 
 
 
-<a href='{{i.get_absolute_url}}' style="color:#1E90FF"><span style="font-size:20px;font-weight:bold;">{{i.Name}}</span></a></br>
+<span style="font-size:20px;font-weight:bold;">{{i.Name}}</span></br>
    <span style="font-weight:bold;font-size:14px;color:red;"><span style="color:#1E90FF">Location:</span>{{i.Location}}</br>
    </p></span>
-   <div style='clear:both'><a href='{{i.get_absolute_url}}' style="margin-tdop:-10px;background-color:green;color:white;text-decoration:none;">Click to View Place Details</a>
+   <div style='clear:both'><a href='{{i.get_absolute_url}}' style="margin-tdop:-10px;background-color:green;color:white;text-decoration:none;">Click to View Place Details</a></a>
    </div>
 
 

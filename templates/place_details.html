@@ -3,7 +3,7 @@
 
 
 
-
+<h2 style="text-align:center;font-weght:bold">Details of {{P2_details.Name}}</h2>
 <div style="background-color:#eaeaea">
 
 <div >
@@ -15,11 +15,11 @@
 
 
 <div style="" ird="place-details">
-<img src="{{P2_details.Pics.url}}" alt="image" stryle="" id="place-d-img"></img>
-<div id="of-Dis">
-<p>Name:	{{P2_details.Name}}</br>
+<img src="{{P2_details.Pics.url}}" alt="image" style="border-radius:5px" id="place-d-img"></img>
+<div id="of-Dis" style="clear:both;">
+<!--<p>Name:	{{P2_details.Name}}</br>-->
 {{P2_details.category.Name}}
-<p style="color:#696969">{{P2_details.Discription|safe}}</p><div>
+<p style="color:#696969;margine-right:5px">{{P2_details.Discription|safe}}</p><div>
 </div>
 
 
@@ -28,7 +28,7 @@
 
 
 
-<div style="width:100%;heght:auto;border:2px solid #191940;overflow:hidden;padding:2px;background-color:#ffae00;"><h2>Rooms</h2></div>
+<div style="width:100%;heght:auto;border:2px solid #191940;overflow:hidden;padding:2px;background-color:#191940;color:white;#ffae00;"><h2>ROOMS</h2></div>
 
 {% for x in P2_details.Room.all %}
     <div style="width:100%;height:auto;border-bottom:2px solid #191940;overflow:auto;padding:2px;margin:2px">

@@ -14,7 +14,7 @@
 {% for i in P_list|dictsortreversed:'time' %}
 <div style="background-color:#eaeaea;border-radius:5px;padding:50px">
 {% if i.Pic %}
-<img src="{{i.Pic.url}}" style="margin:auto;height:auto;width:80%;display:block" alt="image"></img>
+<img src="{{i.Pic.url}}" style="margin:auto;height:auto;width:80%;display:block;border-radius:5px;" alt="image"></img>
 {% endif %}
  <h3>  <a href="{{ i.get_absolute_url }}" style="color:black">{{i}}</a></h3>
 <p class="Article_text">{{i.Article|truncatechars:200}} <a href="{{ i.get_absolute_url }}" style="color:#1E90FF">Read more</a></p>
