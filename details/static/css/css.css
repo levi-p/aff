@@ -515,7 +515,7 @@ li {display:block}
 
 #room-d-img{width:40%;height:auto;float:left}
 
-.mobile {width:100%;height:auto;}
+.mobile {width:100%;height:auto;display:block}
 
 #dd{padding:5px;border-radieus:5px;margin-right:10px;border-right:none;2px solid orange}
 
