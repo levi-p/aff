@@ -5,6 +5,8 @@
 html, body, #container { height: 100%; }
 body > #container { height: auto; min-height: 100%; }
 
+#dd2{padding:5px;border-radieus:5px;margin-right:10px;border-right:none;2px solid orange;display:block;float:right;border:none;}
+
 .book-form {width:40%;margin:auto;height:auto;bordser:2px solid red;border-radius:5px;box-shadow:0 5px 5px orange;padding:15px;margin-bottom:10px}
 
 
@@ -207,9 +209,10 @@ li {
 .twoood {
     margin:auto;
     width: 90%;
-    height: 25%;
+    heigfht: 25%;
+    overflow:hidden;float:;height:auto;position:relative;z-index:-10px;background-color:#eaeaea;margin-bottom:5%;border:1px solid #191940;
     
-    border: 2px solid orange;
+    borrder: 2px solid orange;
     padding: 10px;
     margin-top:20px;
     #margin-left:10px;
@@ -306,7 +309,7 @@ text-align:justify;}
 height:auto;
 float:left;
 width:25%;
-border:1px solid #1E90FF;
+borderf:1px solid #1E90FF;
 margin:2px;
 }
 
@@ -365,7 +368,7 @@ text-align: center;
 height:auto;
 float:left;
 width:42%;
-border:1px solid #1E90FF;
+bodrder:1px solid #1E90FF;
 margin:2px;
 }
 
@@ -401,9 +404,9 @@ border-radius: 5px;height:auto;width:100%;border:;margin:auto;margin-top: 10px;p
 
 .twoood {
     width: 96%;
-    height: 35%;
-    
-    border: 2px solid orange;
+    heright: 35%;
+    overflow:hidden;float:;height:auto;position:relative;z-index:-10px;background-color:#eaeaea;margin-bottom:5%;border:1px solid #191940;
+    bodrder: 2px solid orange;
     padding: 10px;
     margin-top:20px;
     margin-left:10px;
@@ -518,7 +521,7 @@ li {display:block}
 .mobile {width:100%;height:auto;}
 
 #dd{padding:5px;border-radieus:5px;margin-right:10px;border-right:none;2px solid orange;display:block}
-
+#dd2{padding:5px;border-radieus:5px;margin-right:10px;border-right:none;2px solid orange;display:block;float:left;border:none;}
 
 }
 
