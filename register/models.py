@@ -10,3 +10,5 @@ class Sign_up(models.Model):
     password=models.CharField(max_length=30,default='h')
     enter_password=models.CharField(max_length=30,default='h')
     
+
+    

@@ -6,6 +6,6 @@ class Sign_up_form(forms.ModelForm):
     
     class Meta():
         model=Sign_up
-        fields=('Name','Email','enter_password','password')
+        fields=('Name','enter_password','password')
 
         widgets={'enter_password':forms.PasswordInput(attrs={}),'password':forms.PasswordInput(attrs={}),'Email':forms.EmailInput()}

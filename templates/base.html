@@ -107,7 +107,7 @@ li {font-size:16px;margin-right:1px }
 
 
 {% if user.is_authenticated %}
-    <span id="dd2" style=""><a href="{% url "logout" %}"><li>logout</li></a></span>
+    <span id="dd2" style=""><a href="{% url "logout" %}?next=/"><li>logout</li></a></span>
    {% else %}
    <span id="dd2" style="color:white"><li><a style="color:white" href="{% url "login" %}">login</a>/<a style="color:white" href="{% url "Sign_up:Sign_up" %}">sign up</a></li></span>
    {% endif %}
