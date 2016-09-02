@@ -1,4 +1,6 @@
 {% extends 'base.html' %}
+
+dewfwe
 {% block content %}
 
 
@@ -6,20 +8,26 @@
 <h2 style="text-align:center;font-weght:bold">Details of {{P2_details.Name}}</h2>
 <div style="background-color:#eaeaea">
 
-<div >
+
+
+<div class="review" style=""><div style="width:100%;heght:auto;border:2px solid #191940;overflow:hidden;padding:2px;background-color:#191940;color:white;font-weight:bold;text-align:center">reviews</div>
+<p>this is where you can see and write reviews. No reviews yet be the first to write a review</p>
+
 </div>
+
 
 <div class="n-place-details" style="">
 
 
 
 
-<div style="" ird="place-details">
-<img src="{{P2_details.Pics.url}}" alt="image" style="border-radius:5px" id="place-d-img"></img>
-<div id="of-Dis" style="clear:both;">
+<div style="background-color:#eaeaea;#191940;" ird="place-details">
+<img src="{{P2_details.Pics.url}}" alt="image" style="" id="place-d-img"></img>
+<div id="of-Dis" style="clear:both;background-color:white">
 <!--<p>Name:	{{P2_details.Name}}</br>-->
 {{P2_details.category.Name}}
-<p style="color:#696969;margine-right:5px">{{P2_details.Discription|linebreaksbr}}</p><div>
+
+<p style="color:;gray#696969;margin:10px">{{P2_details.Discription|linebreaksbr}}</p></div>
 </div>
 
 
@@ -28,7 +36,7 @@
 
 
 
-<div style="width:100%;heght:auto;border:2px solid #191940;overflow:hidden;padding:2px;background-color:#191940;color:white;#ffae00;"><h2>ROOMS</h2></div>
+<div style="width:100%;heght:auto;border:2px solid #191940;overflow:hidden;padding:2px;background-color:#191940;color:white;#ffae00;text-align:center"><h2>Sample Rooms</h2></div>
 
 {% for x in P2_details.Room.all %}
     <div style="width:100%;height:auto;border-bottom:2px solid #191940;overflow:auto;padding:2px;margin:2px">
@@ -49,13 +57,23 @@
 </div>
 </div>
 
+
+
 {% endfor %}
 
+
 </div>
 
 
+
 </div>
+<div class="review2" style=""><div style="width:100%;heght:auto;border:2px solid #191940;overflow:hidden;padding:2px;background-color:#191940;color:white;font-weight:bold;text-align:center">Reviews</div>
+<p>this is where you can see and write reviews. No reviews yet be the first to write a review</p>
+
+</div>
+
 
 
 
 {% endblock %}
+

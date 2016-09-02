@@ -1,9 +1,21 @@
-{% load static %}
+
 
 
 
 html, body, #container { height: 100%; }
 body > #container { height: auto; min-height: 100%; }
+
+
+.review{width:20%;height:auto;border:2px solid #191940;overflow:hidden;padding:2px;float:right;position:relative;top:-5r0%;background-color:white}
+
+.review2{width:20%;height:auto;border:2px solid #191940;overflow:hidden;padding:2px;float:right;position:relative;top:-5r0%;background-color:white;display:none}
+
+
+
+
+.post_img1{width:32%;height:auto;bofrder-bottom:2px solid #191940;overflow:auto;padding:2px;margin:2px;float:left}
+
+.post_inside{width:100%;height:auto;border-bottom:2px solid #191940;overhflow:auto;padding:2px;margin:2px}
 
 #dd2{padding:5px;border-radieus:5px;margin-right:10px;border-right:none;2px solid orange;display:block;float:right;border:none;}
 
@@ -12,7 +24,8 @@ body > #container { height: auto; min-height: 100%; }
 
 input{color:black}
 
-.login {width:40%;margin:auto;height:auto;bordser:2px solid red;border-radius:5px;fbox-shadow:0 5px 5px orange;padding:15px;margin-bottom:10px;background-color:#191940}
+.login {border:2px solid #191930;width:25%;margin:auto}
+.form-plug{bodrder:2px solid red;width:100%;text-align:center;background-color:#191930;color:white;font-weight:bold;padding:2px;font-size:20px}
 
 .n-place-details {width:50%;height:auto;border:2px solid #191940;margin:auto;padding:2px;border-radius:5px;background-color:white}
 
@@ -23,17 +36,17 @@ input{color:black}
     box-sizing: border-box;
 }
 
-#dd{padding:5px;border-radieus:5px;margin-right:10px;border-right:2px solid orange}
+#dd{padding:5px;border-radieus:5px;margin-right:10px;border-right:1px solid orange;}
 
 #room-d-img{width:20%;height:auto;float:left}
 
-.search-form {width:70%;margin:auto;position:relative;top:90px;}
+.search-form {width:70%;margin:auto;position:relative;top:60px;}
 
 #price-tag{width:25%;height:auto;bordrer:2px solid #191940;overflow:hidden;float:right;font-size:14px;font-weight:bold;color:#1E90FF;padding:2px;}
 
 #affmg {display:none}
 
-.post_list {height:auto;border:;width:50%;margin:auto;}
+.post_list {width:60%;height:auto;border:2px solid #191940;overflow:hidden;padding:2px;backgfround-color:#191940;color:white;#ffae00;margin:auto}
 
 #but{
    
@@ -42,10 +55,10 @@ input{color:black}
 
 
 .contain-body {
-bodrder:2px solid red;width:100%;height:auto;position:relative;top:-200px;background-color:#eaeaea
+bodrder:2px solid red;width:100%;height:auto;position:relative;top:-220px;background-corlor:#eaeaea;margin:auto;overflow:hidden;
 }
 
-.hp-pics { width:50%;height:auto;margin:auto;borhder:2px solid red;background-color:#eaeaea;#e5e5e5;border-radius:5px;padding:10px
+.hp-pics { width:50%;height:auto;madrgin:auto;borhder:2px solid red;background-color:#eaeaea;#e5e5e5;border-radius:5px;padding:1px
 }
 
 .search-text {
@@ -65,17 +78,20 @@ font-size:21px;width:30%;position:relative;top:10px;margin:auto;color:orange
 
 
 .twoo {
-    width: 90%;
-    height: 60%;
-    margin: auto;
+width:31%;background-color:white;float:left;margin-right:15px;
+
+
+    
+    height: auto;
+    marging: auto;
     bordker: 1px solid orange;
     padding: 10px;
     margin-top:20px;
     
     
-    box-shadow:0 0px 0px;
+    bohx-shadow:0 0px 0px;
     border-radius: 5px;
-    cleadr:both;
+    clead:both;
 }
 
 #twoooimg{
@@ -83,7 +99,7 @@ font-size:21px;width:30%;position:relative;top:10px;margin:auto;color:orange
     width:98%;
     height:75%;
     margin:auto;
-    margin-bottom: 5px;
+    margin-bottom: 2px;
 
     border-radius:5px ;
     opaecity:0.8;
@@ -276,15 +292,11 @@ text-align:justify;}
 
 
 #place-d-img {
-margin:2px;
-width:45%;height:auto;margin-bottom:3%;
+
+float:none;width:50%;height:auto;border-radius:5px;margin:auto;display:block;
 
 
-
-
-float:left;
-
-display:block;
+margin-bottom:3%;
 margin-top:5px;
 boreder-radius:5px;
 }
@@ -386,18 +398,15 @@ text-align:justify;}
 
 /* in discription */
 #place-d-img {
-margin:2px;
-width:80%;height:auto;margin-bottom:7%;
+
+float:none;width:100%;height:auto;border-radius:5px;margin:auto;display:block;
 
 
-
-
-float:left;
-
-display:block;
+margin-bottom:3%;
 margin-top:5px;
 boreder-radius:5px;
 }
+
 #place-details {
 border-radius: 5px;height:auto;width:100%;border:;margin:auto;margin-top: 10px;padding: 10px;margin-left:;overflow:hidden;text-align:justify;}
 
@@ -458,7 +467,7 @@ height:auto;}
 
 
 .twoo {
-    width: auto;
+    width: 100%;
     height: auto;
     margin: auto;
     boccrder: 1px solid orange;
@@ -481,7 +490,7 @@ width:100%;height:90%;margdin:auto;background-color:#191930;position:relative;to
 }
 
 .contain-body {
-bodrder:2px solid red;width:100%;height:auto;position:relative;top:-150px;background-color:#eaeaea
+bodrder:2px solid red;width:100%;height:auto;position:relative;top:-180px;background-color:#eaeaea
 }
 
 .search-text {
@@ -497,13 +506,15 @@ overflow:hidden;
    background-color:white ;border-radius: 5px;width:70%;
 }
 
+.post_inside{width:100%;height:auto;border-bottom:2px solid #191940;overhflow:auto;padding:2px;margin:2px;clear:both}
+
 #bgimg{
 background-image: url({% static 'mw3.jpg' %}) ;width:100%;height:43%;background-repeat:initial;position:relative;top:-15px;
 }
 
 .author {display:none;width:20%;float:left;position:relative;borrder: 2px solid red;margin-right:30px;padding:5px;text-align:center;top:10px}
 
-.post_list {height:auto;border:;width:100%;margdin:auto;}
+.post_list {width:100%;height:auto;border:2px solid #191940;overflow:hidden;padding:2px;backgfround-color:#191940;color:white;#ffae00;margin:auto}
 
 
 #affmg {display:block;positsion:relative;tdop:-20px;margifn:auto}
@@ -520,8 +531,14 @@ li {display:block}
 
 .mobile {width:100%;height:auto;}
 
-#dd{padding:5px;border-radieus:5px;margin-right:10px;border-right:none;2px solid orange;display:block}
+#dd{padding:5px;border-radieus:5px;margin-right:10px;border-right:none;2px solid orange;display:block;}
 #dd2{padding:5px;border-radieus:5px;margin-right:10px;border-right:none;2px solid orange;display:block;float:left;border:none;}
+
+.post_img1{width:100%;height:auto;bofrder-bottom:2px solid #191940;overflow:auto;padding:2px;margin:2px;float:none;margin:auto}
+
+.review{width:20%;height:auto;border:2px solid #191940;overflow:hidden;padding:2px;float:right;position:relative;top:-5r0%;background-color:white;display:none}
+
+.review2{width:100%;height:auto;border:2px solid #191940;overflow:hidden;padding:2px;float:right;position:relative;top:-5r0%;background-color:white;clear:both;display:block}
 
 }
 

@@ -3,25 +3,67 @@
 
 {% block title %}
 <title>Articles</title>
+
 {% endblock %}
+
+
 
 {% block content %}
 
 
+
 <h2 style="text-align:center;font-weght:bold">All Articles</h2>
 
-<div  class="post_list">
-{% for i in P_list|dictsortreversed:'time' %}
-<div style="background-color:#eaeaea;border-radius:5px;padding:50px">
+
+
+
+
+<div class="post_list" style="">
+
+{% for x in P_list %}
+
+
+    <div class="post_img1" style="">
+    
+
+<img src="{{x.Pic.url}}" alt="image" style="width:100%" id="room-d-img" /></div>
+
+
+
+<div class="post_inside" style="">
 {% if i.Pic %}
-<img src="{{i.Pic.url}}" style="margin:auto;height:auto;width:80%;display:block;border-radius:5px;" alt="image"></img>
+<img src="{x.Pic.url}}" style="margin:auto;height:auto;width:80%;display:block;border-radius:5px;" alt="image"></img>
 {% endif %}
- <h3>  <a href="{{ i.get_absolute_url }}" style="color:black">{{i}}</a></h3>
-<p class="Article_text">{{i.Article|truncatechars:200}} <a href="{{ i.get_absolute_url }}" style="color:#1E90FF">Read more</a></p>
-</div></br>
+ <h3>  <a href="{{ x.get_absolute_url }}" style="color:black">{{x}}</a></h3>
+<p class="Article_text">{{x.Article|truncatechars:200}} <a href="{{ x.get_absolute_url }}" style="color:#1E90FF">Read more</a></p>
+        </div></br>
+
+
+
+
+
+
+
+
+
+
+
 {% endfor %}
+
+
 </div>
 
 
 
+
+
+
+
+
+
+
+
+
 {% endblock %}
+
+

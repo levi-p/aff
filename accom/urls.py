@@ -29,7 +29,7 @@ urlpatterns = [
     url(r'^booking/', include('booking.urls',namespace='book')),
     url(r'^booking/', include('register.urls',namespace='reg')),
     url('^', include('django.contrib.auth.urls')),
-    url(r'^accounts/login/$', auth_views.login ,{'redirect_field_name':'c.html'},name='login'),
+    url(r'^accounts/login/$', auth_views.login ,name='login'),
     url(r'^accounts/login/$', auth_views.password_reset),
     url(r'^accounts/profile/$', views.home),
     url(r'^about/', views.About, name='about'),
