@@ -20,10 +20,11 @@
 
 <div class="post_list" style="">
 
-{% for x in P_list %}
+{% for x in P_list|dictsortreversed:'time' %}
+<div style="width:100%;height:auto;overflow:hidden;border-bottom:2px solid #191940">
 
 
-    <div class="post_img1" style="">
+    <div class="post_img1" style="overflow:hidden;height:auto">
     
 
 <img src="{{x.Pic.url}}" alt="image" style="width:100%" id="room-d-img" /></div>
@@ -47,7 +48,7 @@
 
 
 
-
+</div>
 {% endfor %}
 
 

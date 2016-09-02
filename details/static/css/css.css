@@ -15,7 +15,7 @@ body > #container { height: auto; min-height: 100%; }
 
 .post_img1{width:32%;height:auto;bofrder-bottom:2px solid #191940;overflow:auto;padding:2px;margin:2px;float:left}
 
-.post_inside{width:100%;height:auto;border-bottom:2px solid #191940;overhflow:auto;padding:2px;margin:2px}
+.post_inside{width:100%;height:auto;border-fbottom:2px solid #191940;overhflow:auto;padding:2px;margin:2px}
 
 #dd2{padding:5px;border-radieus:5px;margin-right:10px;border-right:none;2px solid orange;display:block;float:right;border:none;}
 
@@ -506,7 +506,7 @@ overflow:hidden;
    background-color:white ;border-radius: 5px;width:70%;
 }
 
-.post_inside{width:100%;height:auto;border-bottom:2px solid #191940;overhflow:auto;padding:2px;margin:2px;clear:both}
+.post_inside{width:100%;height:auto;border-botrtom:2px solid #191940;overhflow:auto;padding:2px;margin:2px;clear:both}
 
 #bgimg{
 background-image: url({% static 'mw3.jpg' %}) ;width:100%;height:43%;background-repeat:initial;position:relative;top:-15px;
