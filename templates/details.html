@@ -19,12 +19,12 @@ ul a{
 <div style="background-color:#eaeaea;padding:5px">
 
 
-<div class="done" style="padding:5px">
+<div class="done" style="padding:0px;widfth:60%">
 
 
 {% for i in P_details %}
 
-<div class='twoood' style="">
+<div class='twoood' style="widteh:100%">
 <a href='{{i.get_absolute_url}}' style="color:#1E90FF">
    <div>{% if i.Pics %}
    <img src="{{i.Pics.url}}" id="p-list-img" style="width:40%;border-radius:5px" alt='ff'></img>
@@ -32,8 +32,8 @@ ul a{
 
 
 <span style="font-size:20px;font-weight:bold;">{{i.Name}}</span></br>
-   <span style="font-weight:bold;font-size:14px;color:red;"><span style="color:#1E90FF">Location:</span>{{i.Location}}</br>
-<a href='{{i.get_absolute_url}}' style="margin-tdop:-10px;background-color:green;color:white;text-decoration:none;">Click to View Place Details</a>
+   <span style="font-weight:bold;font-size:14px;color:red;"><span style="color:#1E90FF">Location:</span>{{i.Location}}</br></span>
+<span style="font-weight:bold;font-size:14px;border-radius:5px"><a href='{{i.get_absolute_url}}' style="padding:2px;border-radius:5px;margin-tdop:-10px;background-color:green;color:white;text-decoration:none;">Click to View Place Details</a>
    </p>
 
 </span>

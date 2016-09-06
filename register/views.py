@@ -10,32 +10,34 @@ from django.contrib.auth import authenticate ,login
 
 #@csrf_protect
 def Sign_up_v(request):
+        d=request.user
     
-        
-        form=Sign_up_form(request.POST)
-        if form.is_valid():
-            Username=form.cleaned_data['Name']
+        try:
+            form=Sign_up_form(request.POST)
+            if form.is_valid():
+                Username=form.cleaned_data['Name']
             #Email=form.cleaned_data['Email']
-            password1 = form.cleaned_data['password']
-            password2=form.cleaned_data['enter_password']
+                password1 = form.cleaned_data['password']
+                password2=form.cleaned_data['enter_password']
             
-            if password1 == password2 : 
+                if password1 == password2 : 
                 #form.save()
                 #d=Sign_up(Username,Email,password1)
                 #d.save()
-                user=User.objects.create_user(Username,'youremail@email.com',password1)
-                user.save()
-                logde=authenticate(username=form.cleaned_data['Name'],password=form.cleaned_data['password'])
+                    user=User.objects.create_user(Username,'youremail@email.com',password1)
+                    user.save()
+                    logde=authenticate(username=form.cleaned_data['Name'],password=form.cleaned_data['password'])
 
-                login(request,logde)
-                return redirect('/')
+                    login(request,logde)
+                    return redirect('/')
                 
                 
-            else:
-                pass
-    #else:
+                else:
+                    pass
+    #else:   
      #   form=Sign_up_form()
-
+        except:
+            error2="you are already registered, please login"
         return render(request,'sign_up.html',locals())
 
 

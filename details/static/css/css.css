@@ -212,11 +212,11 @@ li {
     background-color:white;
     
     display:block;
-    floact: left;
-    width: 40%;
+    float: right;
+    width: 60%;
     height: auto;
     kkoverflow: auto;
-    margin: auto;
+    margin-right:40px;
     margin-top:10px;
     bordeer:2px solid green ;
     border-radius:5px;
@@ -224,7 +224,7 @@ li {
 
 .twoood {
     margin:auto;
-    width: 90%;
+    width: 100%;
     heigfht: 25%;
     overflow:hidden;float:;height:auto;position:relative;z-index:-10px;background-color:#eaeaea;margin-bottom:5%;border:1px solid #191940;
     
@@ -233,7 +233,7 @@ li {
     margin-top:20px;
     #margin-left:10px;
     box-shadohw:0 5px 5px;
-    border-radius: 5px;
+    border-radius: 2px;
    }
 
 .sp {
@@ -412,15 +412,15 @@ border-radius: 5px;height:auto;width:100%;border:;margin:auto;margin-top: 10px;p
 
 
 .twoood {
-    width: 96%;
+    width: 100%;
     heright: 35%;
     overflow:hidden;float:;height:auto;position:relative;z-index:-10px;background-color:#eaeaea;margin-bottom:5%;border:1px solid #191940;
     bodrder: 2px solid orange;
     padding: 10px;
     margin-top:20px;
-    margin-left:10px;
-    box-shadohw:0 5px 5px;
-    border-radius: 5px;
+    maregin-left:10px;
+    bofx-shadohw:0 5px 5px;
+    border-radius: 1px;
    }
 
 
