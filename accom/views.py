@@ -23,8 +23,8 @@ def search(request):
             
             try:
                 g=(Q(Location__icontains=qr)|
-                   Q(Name__icontains=qr)|
-                   Q(Discription__icontains=qr))
+                   Q(Name__icontains=qr))
+                   #Q(Discription__icontains=qr))
                 results = place_details.objects.filter(g)
                 if list(results)==[]:
                     result2='No results found'
